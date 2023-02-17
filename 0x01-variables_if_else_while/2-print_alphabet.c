@@ -3,18 +3,17 @@
 /**
  * main - Entry point
  *
- * Description: 'main functition print lower case'
  *
- * Return Always 0 (succes)
+ * Return: Always 0 (Sucess)
  */
 
 int main(void)
 {
-	char a = 'a';
+	char c;
 
-	for (a = 'a'; a <= 'z'; a++)
+	for (c = 'a' ; c <= 'z' ; c++)
 	{
-		putchar(a);
+		putchar(c);
 	}
 	putchar('\n');
 	return (0);
