@@ -3,6 +3,7 @@
 /**
  * main - Entry point
  *
+ * Description: 'main functition print lower case'
  *
  * Return Always 0 (succes)
  */
