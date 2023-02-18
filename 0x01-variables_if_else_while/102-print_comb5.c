@@ -13,31 +13,32 @@ int main(void)
 	int ten;
 	int bas;
 
-for ( tho = 0 ; tho < 10 ; tho++)
-{	
-
-	for (hun = 0 ; hun <= 10 ; hun++)
-	{
-	
-		for (ten = 0 ; ten < 10 ; ten++)
+	for ( tho = 0 ; tho < 10 ; tho++)
+	{	
+		for (hun = 0 ; hun <= 10 ; hun++)
 		{
-			for ( bas = 0 ; bas < 10 ; bas++)
+			for (ten = tho ; ten < 10 ; ten++)
 			{
-				putchar('0' + tho);
-				putchar('0' + hun);
-				putchar(32);
-				putchar('0' + ten);
-				putchar('0' + bas);
-				if (!(tho == 9 && hun == 8))
+				for ( bas = 0 ; bas < 10 ; bas++)
 				{
-					putchar(',');
-					putchar(32);
+					if (!(tho == 0 && hun == 0 && ten == 0 && bas == 0))
+					{
+						putchar('0' + tho);
+						putchar('0' + hun);
+						putchar(32);
+						putchar('0' + ten);
+						putchar('0' + bas);
+					}
+					if (!(tho == 9 && hun == 8))
+					{
+						putchar(',');
+						putchar(32);
+					}
+					ten++;
 				}
-				bas++;
 			}
 		}
 	}
-}
 	putchar('\n');
 	return (0);
 }
