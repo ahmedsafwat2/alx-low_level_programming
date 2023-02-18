@@ -24,7 +24,9 @@ int main(void)
 
 					putchar('0' + n);
 					putchar('0' + i);
+					putchar(32);
 					putchar('0' + j);
+					putchar('0' + k);
 					if ((n == 9 && i == 8 && j == 9 && k == 9) != 1)
 					{
 						putchar(',');
