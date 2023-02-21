@@ -6,7 +6,7 @@
  * Return: x10 a-z
  */
 
-void print_alphabet()
+void print_alphabet(void)
 {
 	char c;
 
