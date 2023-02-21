@@ -8,7 +8,7 @@
 int _islower(int c)
 {
 	char r;
-	
+
 	if (c >= 65 && c <= 90)
 		r = 0;
 	else if (c >= 97 && c <= 122)
