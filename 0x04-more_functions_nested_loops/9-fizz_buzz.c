@@ -11,7 +11,7 @@ int main(void)
 {
 	int i;
 
-	printf("1");
+	printf("1 ");
 	for (i = 2; i <= 100; i++)
 	{
 		if (i % 3 == 0)
