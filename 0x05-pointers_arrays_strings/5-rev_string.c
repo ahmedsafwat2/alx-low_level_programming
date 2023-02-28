@@ -19,7 +19,6 @@ void rev_string(char *s)
 	}
 	s--;
 	len2 = len / 2;
-	len = len -2;
 	for (i = 0; i < len2; i++)
 	{
 		char c;
