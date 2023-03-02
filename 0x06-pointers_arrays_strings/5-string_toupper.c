@@ -10,12 +10,13 @@ char *string_toupper(char *n)
 	char *c;
 
 	c = n;
-	while (*n = '\0')
+	while (*n != '\0')
 	{
 		if (*n >= 'a' && *n <= 'z')
 		{
 			*n = *n - 32;
 		}
+		n++;
 	}
 	return (c);
 }
