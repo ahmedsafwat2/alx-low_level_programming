@@ -18,8 +18,8 @@ void reverse_array(int *a, int n)
 		int temp;
 
 		temp = z[i];
-		z[i] = z[n - 1 -i];
-		z[n - 1 -i] = temp;
+		z[i] = z[n - 1 - i];
+		z[n - 1 - i] = temp;
 	}
 }
 
