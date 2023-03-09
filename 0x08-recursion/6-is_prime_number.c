@@ -31,7 +31,6 @@ int prime(int n, int i)
 	{
 		if (n % i == 0)
 			return (0);
-		else
-			return (prime(n, i - 1));
+		return (prime(n, i - 1));
 	}
 }
