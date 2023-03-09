@@ -15,6 +15,7 @@ int is_prime_number(int n)
 	if (n < 2)
 		return (0);
 	s = s & prime(n, .5 * n);
+	return (s);
 }
 
 /**
@@ -31,6 +32,6 @@ int prime(int n, int i)
 		if (n % i == 0)
 			return (0);
 		else
-		prime(n, i - 1);
+		return (prime(n, i - 1));
 	}
 }
