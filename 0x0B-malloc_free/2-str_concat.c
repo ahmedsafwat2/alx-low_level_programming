@@ -16,12 +16,14 @@ char *str_concat(char *s1, char *s2)
 	h = strlen(s1);
 	j = strlen(s2);
 	g = malloc(sizeof(*g) * (h + j + 1));
-	for (i = 0; i <= h; i++)
+	if (g == NULL)
+		return (NULL);
+	for (i = 0; i < h; i++)
 	{
 		g[c] = s1[i];
 		c++;
 	}
-	for (i = 0; i <= j; i++)
+	for (i = 0; i < j; i++)
 	{
 		g[c] = s2[i];
 		c++;
