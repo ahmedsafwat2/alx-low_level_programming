@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s[c] = s1[i];
 		c++;
 	}
-       	for (i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		s[c] = s2[i];
 		c++;
