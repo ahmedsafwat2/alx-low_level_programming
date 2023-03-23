@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stddef.h>
 #include <stdio.h>
 /**
  * array_iterator - prints each array elem on a newl
@@ -9,7 +10,7 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+	size_t i;
 
 	for (i = 0; i < size; i++)
 	{
