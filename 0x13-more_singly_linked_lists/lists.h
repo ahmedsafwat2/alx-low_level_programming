@@ -10,7 +10,7 @@
 * Description: singly linked list node structure
 * for alx project
 */
-typedef struct list_h
+typedef struct listint_s
 {
 	int n;
 	struct list_h *next;
