@@ -1,6 +1,3 @@
-nes (25 sloc)  433 Bytes
- 
-
 /*
  * File: 5-free_listint2.c
  * Auth: Brennan D Baraban
