@@ -17,12 +17,17 @@ unsigned int binary_to_uint(const char *b)
 	i--;
 	for (j = i; j >= 0; j--)
 	{
-		if (b[i] < '0' || b[i] > '1')
+		sum = 1;
+		if (b[j] < '0' || b[j] > '1')
+		{
 			return (0);
+		}
 		if (b[j] == '1')
 		{
 			for (h = 1; h <= (i - j); h++)
+			{
 				sum = sum * 2;
+			}
 			result = result + sum;
 		}
 	}
