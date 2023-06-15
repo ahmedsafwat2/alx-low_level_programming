@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a linked list
+ * add_dnodeint - adds a new node at the beginning of a linked list
  * @head: double pointer to the list_t list
  * @n: new integer to add in the node
  *
@@ -14,7 +14,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	s = malloc(sizeof(dlistint_t));
 	if (s == NULL)
 		return (NULL);
-	if(*head==NULL)
+	if (*head == NULL)
 	{
 		s->next = NULL;
 		s->prev = NULL;
