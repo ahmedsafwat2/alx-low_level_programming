@@ -4,7 +4,7 @@
  * set_value - set value in strucy
  * @key: a string that cannot be empty.
  * @value: a string refer to value.
- * REturn: struct refer to node.
+ * REturn: pointer to new node.
 */
 
 hash_node_t *set_value(const char *key, const char *value)
