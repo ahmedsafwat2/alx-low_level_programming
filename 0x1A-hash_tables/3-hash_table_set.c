@@ -1,11 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * set_value - set value in strucy
- * @key: a string that cannot be empty.
- * @value: a string refer to value.
- * REturn: pointer to new node.
-*/
+ * set_value - mallocs a key/value pair to the hash table.
+ * @key: the key, a string that cannot be empty.
+ * @value: the value associated with the key, can be an empty string.
+ *
+ * Return: pointer to the new node.
+ */
 
 hash_node_t *set_value(const char *key, const char *value)
 {
