@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * set_value - mallocs a key/value pair to the hash table.
  * @key: the key, a string that cannot be empty.
@@ -7,20 +6,18 @@
  *
  * Return: pointer to the new node.
  */
-
 hash_node_t *set_value(const char *key, const char *value)
 {
 	hash_node_t *hn = malloc(sizeof(hash_node_t));
 
 	if (hn == NULL)
 		return (NULL);
-	hn->key = malloc(sizeof(strlen(key) + 1));
+	hn->key = malloc(strlen(key) + 1);
 	if (hn->key == NULL)
 		return (NULL);
-	hn->value = malloc(sizeof(strlen(value) + 1));
+	hn->value = malloc(strlen(value) + 1);
 	if (hn->value == NULL)
 		return (NULL);
-	hn->next = NULL;
 	strcpy(hn->key, key);
 	strcpy(hn->value, value);
 	return (hn);
@@ -35,18 +32,19 @@ hash_node_t *set_value(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *hn = NULL;
-	hash_node_t *node = NULL;
-	unsigned long int index = key_index((unsigned char *)key, ht->size);
+	unsigned long int index;
+	hash_node_t *node;
 
 	if (key == NULL || ht == NULL)
 		return (0);
+	index = key_index((unsigned char *)key, ht->size);
 	if (ht->array[index] == NULL)
 	{
-		hn = set_value(key, value);
-		if (hn == NULL)
+		node = set_value(key, value);
+		if (node == NULL)
 			return (0);
-		ht->array[index] = hn;
+		node->next = NULL;
+		ht->array[index] = node;
 		return (1);
 	}
 	node = ht->array[index];
@@ -57,21 +55,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (strcmp(node->value, value) == 0)
 				return (1);
 			free(node->value);
-			node->value = malloc(sizeof(strlen(value) + 1));
+			node->value = malloc(strlen(value) + 1);
 			if (node->value == NULL)
 				return (0);
 			strcpy(node->value, value);
-			return (1);
 		}
-		node = node->next;
+		node = node->next
 	}
 	if (node == NULL)
 	{
-		hn = set_value(key, value);
-		if (hn == NULL)
+		node = set_value(key, value);
+		if (node == NULL)
 			return (0);
-		hn->next = ht->array[index];
-		ht->array[index] = hn;
+		node->next = ht->array[index];
+		ht->array[index] = node;
 		return (1);
 	}
 	return (0);
